@@ -50,6 +50,12 @@ public class PruebaSelenium {
             WebElement enter = navegador.findElement(By.xpath("/html/body/div[1]/div[3]/div/div/section/div[1]/div[2]/div/div[3]/div[1]/form/button"));
             enter.click();
 
+                   WebElement entrarEntorno = navegador.findElement(By.xpath("/html/body/div[2]/div[3]/div/div/section[1]/div/aside/section[2]/div/div/div[1]/div[2]/div/div/div[1]/div/div/div[2]/div[1]/div/div[1]/a"));
+                   entrarEntorno.click();
+                   
+                   String encabezado = navegador.findElement(By.xpath("/html/body/div[1]/div[3]/header/div/div/div/div[1]/div[1]/div/div/h1")).getText();
+                    System.out.println("Primer encabezado: "+encabezado);
+                   
             Thread.sleep(5000);
 
         
@@ -70,10 +76,8 @@ public class PruebaSelenium {
          //     WebElement enlaceAl = navegador.findElement(By.linkText("Página aleatoria"));
             //  enlaceAl.click();
               
-       
           
         
-        System.out.println( navegador.getTitle());
     navegador.quit();
     }
 }
